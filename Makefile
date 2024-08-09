@@ -1,21 +1,18 @@
 # Defining directories structure
 MAIN_DIR =./src
-INCLUDE_DIR =$(MAIN_DIR)/include
+INCLUDE_DIR =-I$(MAIN_DIR)/include
 SRC_DIR =$(MAIN_DIR)/src
 TEST_DIR =./tests
 BIN_DIR =./bin
 
 # Defining compilator behaviour
-CC = C:/Users/feliks.brzezinski/Desktop/mingw64/bin/gcc
-CFLAGS +=-c -Wall -I$(INCLUDE_DIR)
+CC = gcc
+CFLAGS +=-c -Wall $(INCLUDE_DIR)
 LDFLAGS += 
 
 # Looking for .c files
 CSOURCE += $(MAIN_DIR)/main.c
 CSOURCE += $(wildcard $(SRC_DIR)/*.c)
-
-# Looking for .h files
-INCLUDE += $(wildcard $(INCLUDE_DIR)/*.h)
 
 # List of .o files
 COBJECT = $(patsubst %.c, %.o, $(CSOURCE))

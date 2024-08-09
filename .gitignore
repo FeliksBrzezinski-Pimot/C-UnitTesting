@@ -1,2 +1,9 @@
+# Ignoring build files
 *.o
 bin/*
+
+# Ignoring test libraries
+tools/*
+
+#Ignoring other local files
+.vscode/*

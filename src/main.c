@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "test_func.h"
-#include "test_func2.h"
+#include "test_func_multiply.h"
+#include "test_func_sum.h"
 
 int main()
 {

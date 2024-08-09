@@ -2,7 +2,8 @@
 
 static void RunAllTests(void)
 {
-  RUN_TEST_GROUP(TEST1);
+  RUN_TEST_GROUP(TEST_SUM);
+  RUN_TEST_GROUP(TEST_MULTIPLY);
 }
 
 int main(int argc, const char * argv[])

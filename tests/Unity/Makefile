@@ -50,7 +50,7 @@ LDFLAGS +=
 # ----MAKEFILE VARIABLES----
 # --------------------------
 #Start dependancy
-NAME = all_tests
+NAME = AllTests
 
 #For building all object files from .c files
 COBJECT = $(patsubst %.c, %.o, $(CSOURCE))
@@ -64,11 +64,13 @@ all: $(NAME)
 	@echo ===================================
 	@echo          Finished build
 	@echo ===================================
-	@$(MAKE) clean
-	@echo ===================================
-	@echo         Finished cleaning
-	@echo ===================================
 	@echo Build: OK
+	@echo `                                 `
+	@echo `                                 `
+	@echo ===================================
+	@echo            Run tests
+	@echo ===================================
+	./$(NAME)
 
 $(COBJECT): %o : %c
 %o: %c 

@@ -11,6 +11,9 @@ UNITY_DIR = $(ROOT_DIR)/tools/Unity
 SRC_UNITY_DIR = $(UNITY_DIR)/src
 EXTRA_UNITY_DIR = $(UNITY_DIR)/extras
 
+# Adding FFF path
+FFF_DIR = $(ROOT_DIR)/tools/FFF
+
 # Adding test paths
 TEST_DIR = .
 
@@ -30,12 +33,15 @@ CSOURCE += $(wildcard $(SRC_DIR)/src/*.c)
 CSOURCE += $(wildcard $(TEST_DIR)/*/*.c)
 CSOURCE += $(wildcard $(TEST_DIR)/*.c)
 
-
 # Finding all directories of .h files
+# Production
 INCLUDE = -I$(INCLUDE_DIR)
+# Unity
 INCLUDE += -I$(SRC_UNITY_DIR)
 INCLUDE += -I$(EXTRA_UNITY_DIR)/memory/src
 INCLUDE += -I$(EXTRA_UNITY_DIR)/fixture/src
+# FFF
+INCLUDE += -I$(FFF_DIR)
 
 # --------------------------
 # ----COMPILER SETTINGS-----
@@ -86,7 +92,7 @@ $(NAME): $(COBJECT)
 	@echo ===================================
 	$(CC) $(COBJECT) -o $(NAME) $(LDFLAGS)
 
-.PHONY: clean
+.PHONY: cleans
 clean: 
 	@echo $(OBJCLEAN)
 	@del /Q /S $(OBJCLEAN)

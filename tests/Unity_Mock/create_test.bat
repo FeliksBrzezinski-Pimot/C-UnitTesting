@@ -39,6 +39,7 @@ echo # SET THE NAME OF DIRECTORY!!! >> CMakeLists.txt
 echo set(MODULE_NAME "<nazwa_modulu>") >> CMakeLists.txt
 echo set(MODULE_NAME "<nazwa_modulu>" PARENT_SCOPE) >> CMakeLists.txt
 echo.>> CMakeLists.txt
+echo set(MOCK_DIR ../mocks)
 echo # If you need to add mocks from mocks folder do so  >> CMakeLists.txt
 echo set(SRC_FILES  >> CMakeLists.txt
 echo     "test_${MODULE_NAME}.c" >> CMakeLists.txt

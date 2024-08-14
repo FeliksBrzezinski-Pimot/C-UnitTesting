@@ -2,7 +2,6 @@
 MAIN_DIR =./src
 INCLUDE_DIR =-I$(MAIN_DIR)/include
 SRC_DIR =$(MAIN_DIR)/src
-TEST_DIR =./tests
 BIN_DIR =./bin
 
 # Defining compilator behaviour
@@ -34,9 +33,12 @@ $(COBJECT): %o : %c
 	$(CC) $(CFLAGS) -c $(CSOURCE)
 
 .PHONY: $(NAME)
-$(NAME): $(COBJECT)
+$(NAME): $(COBJECT) | dir_create
 	@echo Linking...
 	$(CC) $(COBJECT) -o $(BIN_DIR)/$(NAME) $(LDFLAGS)
+
+dir_create:
+	mkdir bin
 
 .PHONY: clean
 clean:

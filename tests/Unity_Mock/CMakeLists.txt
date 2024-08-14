@@ -1,7 +1,3 @@
-# https://stackoverflow.com/questions/65794793/how-do-you-mock-and-test-the-same-function-in-c-c-with-fff-and-google-test
-# https://byu-cpe.github.io/ecen330/documentation/cmake/
-# MUY IMPORTANTE -> https://www.youtube.com/watch?v=6Ows5uZKqGQ 
-
 # ===================================
 # CMake definitions
 # ===================================

@@ -1,5 +1,5 @@
 #include "unity_fixture.h"
-#include "test_func_sum.h"
+#include "func_sum.h"
 
 TEST_GROUP(TEST_SUM);
 

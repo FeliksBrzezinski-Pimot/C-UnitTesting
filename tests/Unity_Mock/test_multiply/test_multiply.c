@@ -1,5 +1,5 @@
 #include "unity_fixture.h"
-#include "test_func_multiply.h"
+#include "func_multiply.h"
 
 TEST_GROUP(TEST_MULTIPLY);
 
@@ -10,7 +10,7 @@ TEST_SETUP(TEST_MULTIPLY)
 
 TEST_TEAR_DOWN(TEST_MULTIPLY)
 {
-
+ 
 }
 
 TEST(TEST_MULTIPLY, CheckMultiply)

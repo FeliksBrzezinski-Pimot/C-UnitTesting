@@ -70,9 +70,10 @@ By utworzyć w pełni nowy moduł testów najprościej jest posłużyć się skr
 Generalnie schemat konfiguracji plików i pisania kodu jest następujący:
 1. Tworzymy grupę testów w pliku `test_<nazwa_modulu>.c`
 2. Dodajemy grupę testów do pliku `AllTests.c` 
-3. Edytujemy wstępnie plik CMake
-4. Piszemy testy 
-5. Dodajemy napisane testy do `test_<nazwa_modulu>_runner.c`
+3. Edytujemy wstępnie plik CMake (folderu)
+4. Dodajemy ścieżkę folderu do nadrzędnego CMake'a (zmienna TEST_SRC)
+5. Piszemy testy 
+6. Dodajemy napisane testy do `test_<nazwa_modulu>_runner.c`
 
 Edycja pliku CMake
 ---

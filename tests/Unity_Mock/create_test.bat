@@ -14,7 +14,6 @@ echo.>%runner_file%
 echo.>CMakeLists.txt
 
 echo #include "unity_fixture.h" >> %main_file%
-echo #include "test_func_multiply.h" >> %main_file%
 echo.>> %main_file%
 echo TEST_GROUP(%test_name%); >> %main_file%
 echo.>> %main_file%
